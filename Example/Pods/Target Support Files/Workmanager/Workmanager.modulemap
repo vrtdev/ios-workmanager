@@ -1,0 +1,6 @@
+framework module Workmanager {
+  umbrella header "Workmanager-umbrella.h"
+
+  export *
+  module * { export * }
+}

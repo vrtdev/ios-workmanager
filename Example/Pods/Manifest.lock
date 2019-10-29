@@ -1,0 +1,16 @@
+PODS:
+  - Workmanager (0.1.0)
+
+DEPENDENCIES:
+  - Workmanager (from `../`)
+
+EXTERNAL SOURCES:
+  Workmanager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Workmanager: 28a1d8fa117491f9552a1f65182abc6f99d55f50
+
+PODFILE CHECKSUM: 5b44dc91308611c26dcc88facebfa34ea46557b5
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Workmanager_Example' do
+  pod 'Workmanager', :path => '../'
+
+  target 'Workmanager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

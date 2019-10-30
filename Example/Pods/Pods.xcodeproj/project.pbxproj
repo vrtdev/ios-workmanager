@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10AE12D62A57CA0515D6E416A3608DB3 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C732A2E79A7025CDF711316D814F56 /* ReplaceMe.swift */; };
+		136C5BD123683D1E000070C4 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD023683D1E000070C4 /* Worker.swift */; };
+		136C5BD323683EA6000070C4 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD223683EA6000070C4 /* Constraints.swift */; };
+		136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */; };
+		136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD623683FA1000070C4 /* BackoffPolicy.swift */; };
+		136C5BD92368447E000070C4 /* OneTimeWorkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD82368447E000070C4 /* OneTimeWorkRequest.swift */; };
+		136C5BDC2368452E000070C4 /* PeriodicWorkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BDB2368452E000070C4 /* PeriodicWorkRequest.swift */; };
+		136C5BE0236846EA000070C4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BDF236846EA000070C4 /* Request.swift */; };
 		17055299CB2BCF4DFE59203FAD6D634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5DA26D0DF20A31AA5F87AC5B4F652AA1 /* Pods-Workmanager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCABB5B5726CC32E3655BAA19457ABB /* Pods-Workmanager_Example-dummy.m */; };
 		693C9856585B1E681D6AC00E82F38E05 /* Pods-Workmanager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A53FC51B4AC92FADB7D5D327C2D381 /* Pods-Workmanager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,11 +45,17 @@
 /* Begin PBXFileReference section */
 		01437C486AF34D100FF5F0FCAA4D1A8A /* Pods-Workmanager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Tests-Info.plist"; sourceTree = "<group>"; };
 		056879E99682F1016E9B511592512012 /* Workmanager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Workmanager-prefix.pch"; sourceTree = "<group>"; };
-		06C732A2E79A7025CDF711316D814F56 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Workmanager/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		06FBE001D2066E4E1520583FD8549926 /* Workmanager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Workmanager-dummy.m"; sourceTree = "<group>"; };
 		09B21B5087C1ED2B280320DE08AB58F4 /* Pods-Workmanager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workmanager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0E39D91FE8B9BC1B9574E8D680DD52B0 /* Workmanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Workmanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F028CB97209D18849538ED1508B99AA /* Pods-Workmanager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workmanager_Tests-umbrella.h"; sourceTree = "<group>"; };
+		136C5BD023683D1E000070C4 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		136C5BD223683EA6000070C4 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingWorkPolicy.swift; sourceTree = "<group>"; };
+		136C5BD623683FA1000070C4 /* BackoffPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffPolicy.swift; sourceTree = "<group>"; };
+		136C5BD82368447E000070C4 /* OneTimeWorkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeWorkRequest.swift; sourceTree = "<group>"; };
+		136C5BDB2368452E000070C4 /* PeriodicWorkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicWorkRequest.swift; sourceTree = "<group>"; };
+		136C5BDF236846EA000070C4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		1803DCDDC687E2791F0A325E50E58808 /* Workmanager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Workmanager-umbrella.h"; sourceTree = "<group>"; };
 		25CA9B4805FBCE60D3BD9FB4801A5AE4 /* Pods-Workmanager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-Info.plist"; sourceTree = "<group>"; };
 		26743F24A8E9D26DAD5205BB6EC026E8 /* Pods-Workmanager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -99,10 +111,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136C5BDA2368451B000070C4 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				13AC6BA12368906B00238CAA /* Property */,
+				136C5BDF236846EA000070C4 /* Request.swift */,
+				136C5BD82368447E000070C4 /* OneTimeWorkRequest.swift */,
+				136C5BDB2368452E000070C4 /* PeriodicWorkRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		136C5BDE236845C6000070C4 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				136C5BD023683D1E000070C4 /* Worker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		13AC6BA12368906B00238CAA /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				136C5BD223683EA6000070C4 /* Constraints.swift */,
+				136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */,
+				136C5BD623683FA1000070C4 /* BackoffPolicy.swift */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
 		5F1873006694882F367B36A43BAC502D /* Workmanager */ = {
 			isa = PBXGroup;
 			children = (
-				06C732A2E79A7025CDF711316D814F56 /* ReplaceMe.swift */,
+				136C5BDE236845C6000070C4 /* Worker */,
+				136C5BDA2368451B000070C4 /* Request */,
 				9CF469C52BE7A27DADC43CB2B9D38CFA /* Pod */,
 				743845D36B17AFC2CAEA3EC228BC7181 /* Support Files */,
 			);
@@ -378,8 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10AE12D62A57CA0515D6E416A3608DB3 /* ReplaceMe.swift in Sources */,
+				136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */,
+				136C5BE0236846EA000070C4 /* Request.swift in Sources */,
 				A2529D130B1B7ABBE73C65AB97467FF0 /* Workmanager-dummy.m in Sources */,
+				136C5BD92368447E000070C4 /* OneTimeWorkRequest.swift in Sources */,
+				136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */,
+				136C5BDC2368452E000070C4 /* PeriodicWorkRequest.swift in Sources */,
+				136C5BD323683EA6000070C4 /* Constraints.swift in Sources */,
+				136C5BD123683D1E000070C4 /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E58F5D259323B58EF9FB4C66F653953 /* Workmanager.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -546,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E58F5D259323B58EF9FB4C66F653953 /* Workmanager.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -566,6 +616,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

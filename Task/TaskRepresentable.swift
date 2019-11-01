@@ -1,4 +1,4 @@
-protocol Request {
+protocol TaskRepresentable {
 
     var identifier: String { get }
     var name: String { get }
@@ -9,11 +9,5 @@ protocol Request {
     var constraints: [Constraints]? { get }
     var backoffPolicy: BackoffPolicy? { get }
     var inputData: String? { get }
-}
-
-typealias OneTimeWorkRequestable = Request
-
-protocol PeriodicWorkRequestable: Request {
-
-    var frequency: TimeInterval { get }
+    var frequency: TimeInterval? { get }
 }

@@ -1,6 +1,5 @@
-public struct PeriodicWorkRequest: PeriodicWorkRequestable {
+public struct Task: TaskRepresentable {
 
-    var frequency: TimeInterval
     var identifier: String
     var name: String
     var initialDelay: TimeInterval
@@ -10,13 +9,14 @@ public struct PeriodicWorkRequest: PeriodicWorkRequestable {
     var constraints: [Constraints]?
     var backoffPolicy: BackoffPolicy?
     var inputData: String?
+    var frequency: TimeInterval?
 
     public init(identifier: String,
                 name: String,
                 initialDelay: TimeInterval,
                 backoffPolicyDelay: TimeInterval,
-                frequency: TimeInterval,
                 tag: String? = nil,
+                frequency: TimeInterval? = nil,
                 existingWorkPolicy: ExistingWorkPolicy? = nil,
                 constraints: [Constraints]? = nil,
                 backoffPolicy: BackoffPolicy? = nil,
@@ -25,8 +25,8 @@ public struct PeriodicWorkRequest: PeriodicWorkRequestable {
         self.name = name
         self.initialDelay = initialDelay
         self.backoffPolicyDelay = backoffPolicyDelay
-        self.frequency = frequency
         self.tag = tag
+        self.frequency = frequency
         self.existingWorkPolicy = existingWorkPolicy
         self.constraints = constraints
         self.backoffPolicy = backoffPolicy

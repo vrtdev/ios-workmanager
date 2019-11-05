@@ -119,6 +119,10 @@ class ViewController: UIViewController {
     }
 
     @objc private func didTapRegisterPeriodicTaskButton(_ sender: UIButton) {
+        do {
+            try WorkManager.shared.schedulePeriodicTask(withIdentifier: "be.vrt.ios-workmanager.recurringbackgroundtask", name: "", frequency: 60)
+        } catch {
+        }
     }
 
     // MARK: Public color setters

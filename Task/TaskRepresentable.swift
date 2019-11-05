@@ -1,4 +1,4 @@
-protocol TaskRepresentable {
+protocol TaskRepresentable: Equatable {
 
     var identifier: String { get }
     var name: String { get }

@@ -13,6 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.handleOneOffTrigger(task: task as! BGProcessingTask)
         }
 
+        WorkManager.shared.registerTask(withIdentifier: "be.vrt.ios-workmanager.recurringbackgroundtask") { task in
+            self.handlePeriodicTrigger(task: task as! BGProcessingTask)
+        }
+
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .black
         window?.makeKeyAndVisible()
@@ -28,6 +33,14 @@ extension AppDelegate {
     private func handleOneOffTrigger(task: BGProcessingTask) {
         DispatchQueue.main.async { [weak self] in
             self?.viewController.updateOneOffBallColor(toColor: UIColor.random)
+        }
+
+        WorkManager.shared.taskDidFinish(task, success: true)
+    }
+
+    private func handlePeriodicTrigger(task: BGProcessingTask) {
+        DispatchQueue.main.async { [weak self] in
+            self?.viewController.updateRecurringBallColor(toColor: UIColor.random)
         }
 
         WorkManager.shared.taskDidFinish(task, success: true)

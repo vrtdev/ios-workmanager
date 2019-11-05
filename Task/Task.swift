@@ -10,6 +10,10 @@ public struct Task: TaskRepresentable {
     var backoffPolicy: BackoffPolicy?
     var inputData: String?
     var frequency: TimeInterval?
+    var isPeriodic: Bool {
+        guard frequency != nil else { return false}
+        return true
+    }
 
     public init(identifier: String,
                 name: String,

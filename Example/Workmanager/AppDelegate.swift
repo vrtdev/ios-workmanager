@@ -35,7 +35,11 @@ extension AppDelegate {
             self?.viewController.updateOneOffBallColor(toColor: UIColor.random)
         }
 
-        WorkManager.shared.taskDidFinish(task, success: true)
+        do {
+            try WorkManager.shared.taskDidFinish(task, success: true)
+        } catch {
+
+        }
     }
 
     private func handlePeriodicTrigger(task: BGProcessingTask) {
@@ -43,6 +47,10 @@ extension AppDelegate {
             self?.viewController.updateRecurringBallColor(toColor: UIColor.random)
         }
 
-        WorkManager.shared.taskDidFinish(task, success: true)
+        do {
+            try WorkManager.shared.taskDidFinish(task, success: true)
+        } catch {
+
+        }
     }
 }

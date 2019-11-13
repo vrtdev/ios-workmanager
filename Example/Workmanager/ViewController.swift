@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     private let explanationLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        label.text = "Registering a task will randomly change the corresponding ball's background color."
+        label.text = "Registering a task will randomly change the corresponding ball's backgroundcolor."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .black
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
 
     @objc private func didTapRegisterOneOffTaskButton(_ sender: UIButton) {
         do {
-            try WorkManager.shared.scheduleOneOffTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask", name: "")
+            try WorkManager.shared.scheduleOneOffTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask", name: "", existingWorkPolicy: .keep)
         } catch {
         }
     }

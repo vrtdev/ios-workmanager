@@ -4,8 +4,8 @@ public class WorkManager {
 
     // MARK: Properties
 
-    private let scheduler = WorkScheduler()
-    private var scheduledTasks: [ScheduledTask] = []
+    internal let scheduler = WorkScheduler()
+    internal var scheduledTasks: [ScheduledTask] = []
 
     // MARK: Initialization
 
@@ -25,7 +25,7 @@ public class WorkManager {
     public func scheduleOneOffTask(withIdentifier identifier: String,
                                            name: String,
                                            initialDelay: TimeInterval = 0.0,
-                                           backoffPolicyDelay: TimeInterval = 0.0,
+                                           backoffPolicyDelay: TimeInterval = 900.0,
                                            tag: String? = nil,
                                            existingWorkPolicy: ExistingWorkPolicy? = nil,
                                            constraints: [Constraints]? = nil,
@@ -38,7 +38,7 @@ public class WorkManager {
                                                 name: String,
                                                 frequency: TimeInterval,
                                                 initialDelay: TimeInterval = 0.0,
-                                                backoffPolicyDelay: TimeInterval = 0.0,
+                                                backoffPolicyDelay: TimeInterval = 900.0,
                                                 tag: String? = nil,
                                                 existingWorkPolicy: ExistingWorkPolicy? = nil,
                                                 constraints: [Constraints]? = nil,
@@ -47,76 +47,36 @@ public class WorkManager {
         try createTask(withIdentifier: identifier, name: name, frequency: frequency, initialDelay: initialDelay, backoffPolicyDelay: backoffPolicyDelay, tag: tag, existingWorkPolicy: existingWorkPolicy, constraints: constraints, backoffPolicy: backoffPolicy, inputData: inputData)
     }
 
-    // MARK: Creation
-
-    private func createTask(withIdentifier identifier: String,
-                            name: String,
-                            frequency: TimeInterval?,
-                            initialDelay: TimeInterval,
-                            backoffPolicyDelay: TimeInterval,
-                            tag: String?,
-                            existingWorkPolicy: ExistingWorkPolicy?,
-                            constraints: [Constraints]?,
-                            backoffPolicy: BackoffPolicy?,
-                            inputData: String?) throws {
-        if let existingWorkPolicy = existingWorkPolicy, let _ = getScheduledTask(withIdentifier: identifier) {
-            switch existingWorkPolicy {
-            case .keep:
-                return
-            case .replace:
-                cancelTask(withIdentifier: identifier)
-            }
-        }
-
-        let task = Task(identifier: identifier,
-                        name: name,
-                        initialDelay: initialDelay,
-                        backoffPolicyDelay: backoffPolicyDelay,
-                        tag: tag,
-                        frequency: frequency,
-                        existingWorkPolicy: existingWorkPolicy,
-                        constraints: constraints,
-                        backoffPolicy: backoffPolicy,
-                        inputData: inputData)
-
-
-        try scheduler.scheduleTask(task) { request in
-            scheduledTasks.append(ScheduledTask(task: task, request: request))
-        }
-    }
-
     // MARK: Callbacks
 
-    public func taskDidFinish(_ task: BGTask, success: Bool) {
+    public func taskDidFinish(_ task: BGTask, success: Bool) throws {
         task.setTaskCompleted(success: success)
 
         guard let scheduledTask = getScheduledTask(forCompletedTask: task) else {
-            // HANDLE ERROR
             return
         }
 
         guard success else {
-            handleError(withScheduledTask: scheduledTask)
+            try handleError(withScheduledTask: scheduledTask)
             return
         }
 
-        handleSuccess(withScheduledTask: scheduledTask)
+        try handleSuccess(withScheduledTask: scheduledTask)
     }
 
     // MARK: Success handlers
 
-    private func handleSuccess(withScheduledTask scheduledTask: ScheduledTask) {
+    private func handleSuccess(withScheduledTask scheduledTask: ScheduledTask) throws {
         if scheduledTask.task.isPeriodic {
-            handlePeriodicTaskSuccess(withScheduledTask: scheduledTask)
+            try handlePeriodicTaskSuccess(withScheduledTask: scheduledTask)
         } else {
             removeScheduledTask(scheduledTask)
         }
     }
 
-    private func handlePeriodicTaskSuccess(withScheduledTask scheduledTask: ScheduledTask) {
+    private func handlePeriodicTaskSuccess(withScheduledTask scheduledTask: ScheduledTask) throws {
         let previousTask = scheduledTask.task
-        do {
-            try createTask(withIdentifier: previousTask.identifier,
+        try createTask(withIdentifier: previousTask.identifier,
                            name: previousTask.name,
                            frequency: previousTask.frequency,
                            initialDelay: previousTask.frequency!,
@@ -126,81 +86,40 @@ public class WorkManager {
                            constraints: previousTask.constraints,
                            backoffPolicy: previousTask.backoffPolicy,
                            inputData: previousTask.inputData)
-        } catch {
-
-        }
     }
 
     // MARK: Error handlers
 
-    private func handleError(withScheduledTask scheduledTask: ScheduledTask) {
-//        let previousTask = scheduledTask.task
-//        let newTask = previousTask
-//
-//        if let backoffPolicy = previousTask.backoffPolicy {
-//            var delay = 0.0
-//            switch backoffPolicy {
-//            case .linear:
-//                delay += previousTask.backoffPolicyDelay
-//            case .exponential:
-//                delay = pow(previousTask.)
-//                break
-//            }
-//        }
-    }
+    private func handleError(withScheduledTask scheduledTask: ScheduledTask) throws {
+        let previousTask = scheduledTask.task
 
-    // MARK: Cleanup
+        guard let backoffPolicy = previousTask.backoffPolicy else { return }
 
-    public func cancelAllTasks() {
-        BGTaskScheduler.shared.cancelAllTaskRequests()
-        scheduledTasks.removeAll()
-    }
+        var newTask = previousTask
+        var delay = 0.0
 
-    public func cancelTask(withIdentifier identifier: String) {
-        BGTaskScheduler.shared.cancel(taskRequestWithIdentifier: identifier)
-        removeScheduledTask(withIdentifier: identifier)
-    }
-
-    public func cancelTask(withTag tag: String) {
-        if let request = getRequest(withTag: tag) {
-            BGTaskScheduler.shared.cancel(taskRequestWithIdentifier: request.identifier)
-            removeScheduledTask(withTag: tag)
+        switch backoffPolicy {
+        case .linear:
+            delay = previousTask.initialDelay + previousTask.backoffPolicyDelay
+        case .exponential:
+            if previousTask.initialDelay == 0.0 {
+                delay = previousTask.backoffPolicyDelay
+            } else {
+                delay = pow(previousTask.initialDelay, 2)
+            }
         }
-    }
 
-    // MARK: Private helpers
+        newTask.initialDelay = delay
 
-    private func getScheduledTask(forCompletedTask completedTask: BGTask) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.identifier == completedTask.identifier }.first
-    }
-
-    private func getScheduledTask(withIdentifier identifier: String) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.identifier == identifier }.first
-    }
-
-    private func getScheduledTask(withTag tag: String) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.tag == tag }.first
-    }
-
-    private func getRequest(withTag tag: String) -> BGTaskRequest? {
-        return getScheduledTask(withTag: tag)?.request
-    }
-
-    private func removeScheduledTask(_ scheduledTask: ScheduledTask) {
-        if let index = scheduledTasks.firstIndex(where: { $0.task == scheduledTask.task}) {
-            scheduledTasks.remove(at: index)
-        }
-    }
-
-    private func removeScheduledTask(withIdentifier identifier: String) {
-        if let scheduledTask = getScheduledTask(withIdentifier: identifier) {
-            removeScheduledTask(scheduledTask)
-        }
-    }
-
-    private func removeScheduledTask(withTag tag: String) {
-        if let scheduledTask = getScheduledTask(withTag: tag) {
-            removeScheduledTask(scheduledTask)
-        }
+        try createTask(withIdentifier: newTask.identifier,
+                           name: newTask.name,
+                           frequency: newTask.frequency,
+                           initialDelay: newTask.frequency!,
+                           backoffPolicyDelay: newTask.backoffPolicyDelay,
+                           tag: newTask.tag,
+                           existingWorkPolicy: newTask.existingWorkPolicy,
+                           constraints: newTask.constraints,
+                           backoffPolicy: newTask.backoffPolicy,
+                           inputData: newTask.inputData)
     }
 }

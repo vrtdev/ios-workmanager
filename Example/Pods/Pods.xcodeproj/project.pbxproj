@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1353823E2372CDD2006CEAE2 /* WorkManager+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */; };
+		13538240237AA627006CEAE2 /* WorkManager+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */; };
 		136C5BD323683EA6000070C4 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD223683EA6000070C4 /* Constraints.swift */; };
 		136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */; };
 		136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD623683FA1000070C4 /* BackoffPolicy.swift */; };
@@ -51,6 +53,8 @@
 		09B21B5087C1ED2B280320DE08AB58F4 /* Pods-Workmanager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workmanager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0E39D91FE8B9BC1B9574E8D680DD52B0 /* Workmanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Workmanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F028CB97209D18849538ED1508B99AA /* Pods-Workmanager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workmanager_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkManager+Cancel.swift"; sourceTree = "<group>"; };
+		1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkManager+CRUD.swift"; sourceTree = "<group>"; };
 		136C5BD223683EA6000070C4 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingWorkPolicy.swift; sourceTree = "<group>"; };
 		136C5BD623683FA1000070C4 /* BackoffPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffPolicy.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				13AC6BA22369805A00238CAA /* WorkManager.swift */,
+				1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */,
+				1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */,
 				13AC6BAA236AE64200238CAA /* WorkScheduler.swift */,
 				136C5BDA2368451B000070C4 /* Task */,
 				13AC6BAD236AFE2000238CAA /* Builder */,
@@ -426,11 +432,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13538240237AA627006CEAE2 /* WorkManager+CRUD.swift in Sources */,
 				13AC6BB4236B217000238CAA /* ScheduledTask.swift in Sources */,
 				13AC6BAB236AE64200238CAA /* WorkScheduler.swift in Sources */,
 				136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */,
 				136C5BE0236846EA000070C4 /* TaskRepresentable.swift in Sources */,
 				A2529D130B1B7ABBE73C65AB97467FF0 /* Workmanager-dummy.m in Sources */,
+				1353823E2372CDD2006CEAE2 /* WorkManager+Cancel.swift in Sources */,
 				13AC6BAF236AFE3300238CAA /* ProcessingTaskBuilder.swift in Sources */,
 				136C5BD92368447E000070C4 /* Task.swift in Sources */,
 				136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */,

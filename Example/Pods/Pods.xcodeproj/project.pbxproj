@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13538258237BFEDB006CEAE2 /* WorkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538249237BFEDA006CEAE2 /* WorkScheduler.swift */; };
 		13538259237BFEDB006CEAE2 /* WorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824A237BFEDA006CEAE2 /* WorkManager.swift */; };
 		1353825A237BFEDB006CEAE2 /* WorkManager+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */; };
 		1353825B237BFEDB006CEAE2 /* WorkManager+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */; };
@@ -18,6 +17,7 @@
 		13538260237BFEDB006CEAE2 /* TaskRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538254237BFEDB006CEAE2 /* TaskRepresentable.swift */; };
 		13538261237BFEDB006CEAE2 /* ScheduledTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538255237BFEDB006CEAE2 /* ScheduledTask.swift */; };
 		13538262237BFEDB006CEAE2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538256237BFEDB006CEAE2 /* Task.swift */; };
+		13538265237C0068006CEAE2 /* WorkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538264237C0068006CEAE2 /* WorkScheduler.swift */; };
 		17055299CB2BCF4DFE59203FAD6D634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5DA26D0DF20A31AA5F87AC5B4F652AA1 /* Pods-Workmanager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCABB5B5726CC32E3655BAA19457ABB /* Pods-Workmanager_Example-dummy.m */; };
 		693C9856585B1E681D6AC00E82F38E05 /* Pods-Workmanager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A53FC51B4AC92FADB7D5D327C2D381 /* Pods-Workmanager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,7 +53,6 @@
 		09B21B5087C1ED2B280320DE08AB58F4 /* Pods-Workmanager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workmanager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0E39D91FE8B9BC1B9574E8D680DD52B0 /* Workmanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Workmanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F028CB97209D18849538ED1508B99AA /* Pods-Workmanager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workmanager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		13538249237BFEDA006CEAE2 /* WorkScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkScheduler.swift; path = Workmanager/Classes/WorkScheduler.swift; sourceTree = "<group>"; };
 		1353824A237BFEDA006CEAE2 /* WorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkManager.swift; path = Workmanager/Classes/WorkManager.swift; sourceTree = "<group>"; };
 		1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WorkManager+Cancel.swift"; path = "Workmanager/Classes/WorkManager+Cancel.swift"; sourceTree = "<group>"; };
 		1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WorkManager+CRUD.swift"; path = "Workmanager/Classes/WorkManager+CRUD.swift"; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		13538254237BFEDB006CEAE2 /* TaskRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRepresentable.swift; sourceTree = "<group>"; };
 		13538255237BFEDB006CEAE2 /* ScheduledTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledTask.swift; sourceTree = "<group>"; };
 		13538256237BFEDB006CEAE2 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		13538264237C0068006CEAE2 /* WorkScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkScheduler.swift; sourceTree = "<group>"; };
 		1803DCDDC687E2791F0A325E50E58808 /* Workmanager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Workmanager-umbrella.h"; sourceTree = "<group>"; };
 		25CA9B4805FBCE60D3BD9FB4801A5AE4 /* Pods-Workmanager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-Info.plist"; sourceTree = "<group>"; };
 		26743F24A8E9D26DAD5205BB6EC026E8 /* Pods-Workmanager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -158,13 +158,22 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		13538263237C0068006CEAE2 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				13538264237C0068006CEAE2 /* WorkScheduler.swift */,
+			);
+			name = Scheduler;
+			path = Workmanager/Classes/Scheduler;
+			sourceTree = "<group>";
+		};
 		5F1873006694882F367B36A43BAC502D /* Workmanager */ = {
 			isa = PBXGroup;
 			children = (
 				1353824A237BFEDA006CEAE2 /* WorkManager.swift */,
 				1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */,
 				1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */,
-				13538249237BFEDA006CEAE2 /* WorkScheduler.swift */,
+				13538263237C0068006CEAE2 /* Scheduler */,
 				1353824D237BFEDA006CEAE2 /* Builder */,
 				1353824F237BFEDA006CEAE2 /* Task */,
 				9CF469C52BE7A27DADC43CB2B9D38CFA /* Pod */,
@@ -442,7 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13538258237BFEDB006CEAE2 /* WorkScheduler.swift in Sources */,
+				13538265237C0068006CEAE2 /* WorkScheduler.swift in Sources */,
 				1353825C237BFEDB006CEAE2 /* ProcessingTaskBuilder.swift in Sources */,
 				A2529D130B1B7ABBE73C65AB97467FF0 /* Workmanager-dummy.m in Sources */,
 				1353825D237BFEDB006CEAE2 /* ExistingWorkPolicy.swift in Sources */,

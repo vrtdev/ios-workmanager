@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1353823E2372CDD2006CEAE2 /* WorkManager+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */; };
-		13538240237AA627006CEAE2 /* WorkManager+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */; };
-		136C5BD323683EA6000070C4 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD223683EA6000070C4 /* Constraints.swift */; };
-		136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */; };
-		136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD623683FA1000070C4 /* BackoffPolicy.swift */; };
-		136C5BD92368447E000070C4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BD82368447E000070C4 /* Task.swift */; };
-		136C5BE0236846EA000070C4 /* TaskRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5BDF236846EA000070C4 /* TaskRepresentable.swift */; };
-		13AC6BA32369805A00238CAA /* WorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC6BA22369805A00238CAA /* WorkManager.swift */; };
-		13AC6BAB236AE64200238CAA /* WorkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC6BAA236AE64200238CAA /* WorkScheduler.swift */; };
-		13AC6BAF236AFE3300238CAA /* ProcessingTaskBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC6BAE236AFE3300238CAA /* ProcessingTaskBuilder.swift */; };
-		13AC6BB4236B217000238CAA /* ScheduledTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC6BB3236B217000238CAA /* ScheduledTask.swift */; };
+		13538258237BFEDB006CEAE2 /* WorkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538249237BFEDA006CEAE2 /* WorkScheduler.swift */; };
+		13538259237BFEDB006CEAE2 /* WorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824A237BFEDA006CEAE2 /* WorkManager.swift */; };
+		1353825A237BFEDB006CEAE2 /* WorkManager+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */; };
+		1353825B237BFEDB006CEAE2 /* WorkManager+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */; };
+		1353825C237BFEDB006CEAE2 /* ProcessingTaskBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353824E237BFEDA006CEAE2 /* ProcessingTaskBuilder.swift */; };
+		1353825D237BFEDB006CEAE2 /* ExistingWorkPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538251237BFEDB006CEAE2 /* ExistingWorkPolicy.swift */; };
+		1353825E237BFEDB006CEAE2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538252237BFEDB006CEAE2 /* Constraints.swift */; };
+		1353825F237BFEDB006CEAE2 /* BackoffPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538253237BFEDB006CEAE2 /* BackoffPolicy.swift */; };
+		13538260237BFEDB006CEAE2 /* TaskRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538254237BFEDB006CEAE2 /* TaskRepresentable.swift */; };
+		13538261237BFEDB006CEAE2 /* ScheduledTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538255237BFEDB006CEAE2 /* ScheduledTask.swift */; };
+		13538262237BFEDB006CEAE2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13538256237BFEDB006CEAE2 /* Task.swift */; };
 		17055299CB2BCF4DFE59203FAD6D634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5DA26D0DF20A31AA5F87AC5B4F652AA1 /* Pods-Workmanager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCABB5B5726CC32E3655BAA19457ABB /* Pods-Workmanager_Example-dummy.m */; };
 		693C9856585B1E681D6AC00E82F38E05 /* Pods-Workmanager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A53FC51B4AC92FADB7D5D327C2D381 /* Pods-Workmanager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,17 +53,17 @@
 		09B21B5087C1ED2B280320DE08AB58F4 /* Pods-Workmanager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workmanager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0E39D91FE8B9BC1B9574E8D680DD52B0 /* Workmanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Workmanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F028CB97209D18849538ED1508B99AA /* Pods-Workmanager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workmanager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkManager+Cancel.swift"; sourceTree = "<group>"; };
-		1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkManager+CRUD.swift"; sourceTree = "<group>"; };
-		136C5BD223683EA6000070C4 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
-		136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingWorkPolicy.swift; sourceTree = "<group>"; };
-		136C5BD623683FA1000070C4 /* BackoffPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffPolicy.swift; sourceTree = "<group>"; };
-		136C5BD82368447E000070C4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		136C5BDF236846EA000070C4 /* TaskRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentable.swift; sourceTree = "<group>"; };
-		13AC6BA22369805A00238CAA /* WorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkManager.swift; sourceTree = "<group>"; };
-		13AC6BAA236AE64200238CAA /* WorkScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkScheduler.swift; sourceTree = "<group>"; };
-		13AC6BAE236AFE3300238CAA /* ProcessingTaskBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingTaskBuilder.swift; sourceTree = "<group>"; };
-		13AC6BB3236B217000238CAA /* ScheduledTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledTask.swift; sourceTree = "<group>"; };
+		13538249237BFEDA006CEAE2 /* WorkScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkScheduler.swift; path = Workmanager/Classes/WorkScheduler.swift; sourceTree = "<group>"; };
+		1353824A237BFEDA006CEAE2 /* WorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkManager.swift; path = Workmanager/Classes/WorkManager.swift; sourceTree = "<group>"; };
+		1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WorkManager+Cancel.swift"; path = "Workmanager/Classes/WorkManager+Cancel.swift"; sourceTree = "<group>"; };
+		1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WorkManager+CRUD.swift"; path = "Workmanager/Classes/WorkManager+CRUD.swift"; sourceTree = "<group>"; };
+		1353824E237BFEDA006CEAE2 /* ProcessingTaskBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessingTaskBuilder.swift; sourceTree = "<group>"; };
+		13538251237BFEDB006CEAE2 /* ExistingWorkPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingWorkPolicy.swift; sourceTree = "<group>"; };
+		13538252237BFEDB006CEAE2 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		13538253237BFEDB006CEAE2 /* BackoffPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackoffPolicy.swift; sourceTree = "<group>"; };
+		13538254237BFEDB006CEAE2 /* TaskRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRepresentable.swift; sourceTree = "<group>"; };
+		13538255237BFEDB006CEAE2 /* ScheduledTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledTask.swift; sourceTree = "<group>"; };
+		13538256237BFEDB006CEAE2 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		1803DCDDC687E2791F0A325E50E58808 /* Workmanager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Workmanager-umbrella.h"; sourceTree = "<group>"; };
 		25CA9B4805FBCE60D3BD9FB4801A5AE4 /* Pods-Workmanager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-Info.plist"; sourceTree = "<group>"; };
 		26743F24A8E9D26DAD5205BB6EC026E8 /* Pods-Workmanager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workmanager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -119,31 +119,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		136C5BDA2368451B000070C4 /* Task */ = {
+		1353824D237BFEDA006CEAE2 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				13AC6BA12368906B00238CAA /* Property */,
-				136C5BDF236846EA000070C4 /* TaskRepresentable.swift */,
-				136C5BD82368447E000070C4 /* Task.swift */,
-				13AC6BB3236B217000238CAA /* ScheduledTask.swift */,
+				1353824E237BFEDA006CEAE2 /* ProcessingTaskBuilder.swift */,
 			);
-			path = Task;
+			name = Builder;
+			path = Workmanager/Classes/Builder;
 			sourceTree = "<group>";
 		};
-		13AC6BA12368906B00238CAA /* Property */ = {
+		1353824F237BFEDA006CEAE2 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				136C5BD223683EA6000070C4 /* Constraints.swift */,
-				136C5BD423683F37000070C4 /* ExistingWorkPolicy.swift */,
-				136C5BD623683FA1000070C4 /* BackoffPolicy.swift */,
+				13538250237BFEDA006CEAE2 /* Property */,
+				13538254237BFEDB006CEAE2 /* TaskRepresentable.swift */,
+				13538255237BFEDB006CEAE2 /* ScheduledTask.swift */,
+				13538256237BFEDB006CEAE2 /* Task.swift */,
+				13538257237BFEDB006CEAE2 /* Builder */,
+			);
+			name = Task;
+			path = Workmanager/Classes/Task;
+			sourceTree = "<group>";
+		};
+		13538250237BFEDA006CEAE2 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				13538251237BFEDB006CEAE2 /* ExistingWorkPolicy.swift */,
+				13538252237BFEDB006CEAE2 /* Constraints.swift */,
+				13538253237BFEDB006CEAE2 /* BackoffPolicy.swift */,
 			);
 			path = Property;
 			sourceTree = "<group>";
 		};
-		13AC6BAD236AFE2000238CAA /* Builder */ = {
+		13538257237BFEDB006CEAE2 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				13AC6BAE236AFE3300238CAA /* ProcessingTaskBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -151,12 +161,12 @@
 		5F1873006694882F367B36A43BAC502D /* Workmanager */ = {
 			isa = PBXGroup;
 			children = (
-				13AC6BA22369805A00238CAA /* WorkManager.swift */,
-				1353823F237AA627006CEAE2 /* WorkManager+CRUD.swift */,
-				1353823D2372CDD2006CEAE2 /* WorkManager+Cancel.swift */,
-				13AC6BAA236AE64200238CAA /* WorkScheduler.swift */,
-				136C5BDA2368451B000070C4 /* Task */,
-				13AC6BAD236AFE2000238CAA /* Builder */,
+				1353824A237BFEDA006CEAE2 /* WorkManager.swift */,
+				1353824B237BFEDA006CEAE2 /* WorkManager+Cancel.swift */,
+				1353824C237BFEDA006CEAE2 /* WorkManager+CRUD.swift */,
+				13538249237BFEDA006CEAE2 /* WorkScheduler.swift */,
+				1353824D237BFEDA006CEAE2 /* Builder */,
+				1353824F237BFEDA006CEAE2 /* Task */,
 				9CF469C52BE7A27DADC43CB2B9D38CFA /* Pod */,
 				743845D36B17AFC2CAEA3EC228BC7181 /* Support Files */,
 			);
@@ -432,18 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13538240237AA627006CEAE2 /* WorkManager+CRUD.swift in Sources */,
-				13AC6BB4236B217000238CAA /* ScheduledTask.swift in Sources */,
-				13AC6BAB236AE64200238CAA /* WorkScheduler.swift in Sources */,
-				136C5BD723683FA1000070C4 /* BackoffPolicy.swift in Sources */,
-				136C5BE0236846EA000070C4 /* TaskRepresentable.swift in Sources */,
+				13538258237BFEDB006CEAE2 /* WorkScheduler.swift in Sources */,
+				1353825C237BFEDB006CEAE2 /* ProcessingTaskBuilder.swift in Sources */,
 				A2529D130B1B7ABBE73C65AB97467FF0 /* Workmanager-dummy.m in Sources */,
-				1353823E2372CDD2006CEAE2 /* WorkManager+Cancel.swift in Sources */,
-				13AC6BAF236AFE3300238CAA /* ProcessingTaskBuilder.swift in Sources */,
-				136C5BD92368447E000070C4 /* Task.swift in Sources */,
-				136C5BD523683F37000070C4 /* ExistingWorkPolicy.swift in Sources */,
-				13AC6BA32369805A00238CAA /* WorkManager.swift in Sources */,
-				136C5BD323683EA6000070C4 /* Constraints.swift in Sources */,
+				1353825D237BFEDB006CEAE2 /* ExistingWorkPolicy.swift in Sources */,
+				13538262237BFEDB006CEAE2 /* Task.swift in Sources */,
+				1353825E237BFEDB006CEAE2 /* Constraints.swift in Sources */,
+				13538260237BFEDB006CEAE2 /* TaskRepresentable.swift in Sources */,
+				1353825A237BFEDB006CEAE2 /* WorkManager+Cancel.swift in Sources */,
+				13538259237BFEDB006CEAE2 /* WorkManager.swift in Sources */,
+				1353825F237BFEDB006CEAE2 /* BackoffPolicy.swift in Sources */,
+				1353825B237BFEDB006CEAE2 /* WorkManager+CRUD.swift in Sources */,
+				13538261237BFEDB006CEAE2 /* ScheduledTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

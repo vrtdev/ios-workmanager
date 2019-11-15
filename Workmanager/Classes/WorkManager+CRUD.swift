@@ -40,15 +40,15 @@ extension WorkManager {
     }
 
     internal func getScheduledTask(forCompletedTask completedTask: BGTask) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.identifier == completedTask.identifier }.first
+        return scheduledTasks.first { $0.task.identifier == completedTask.identifier }
     }
 
     internal func getScheduledTask(withIdentifier identifier: String) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.identifier == identifier }.first
+        return scheduledTasks.first { $0.task.identifier == identifier }
     }
 
     internal func getScheduledTask(withTag tag: String) -> ScheduledTask? {
-        return scheduledTasks.filter { $0.task.tag == tag }.first
+        return scheduledTasks.first { $0.task.tag == tag }
     }
 
     internal func getRequest(withTag tag: String) -> BGTaskRequest? {

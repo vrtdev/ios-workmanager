@@ -35,8 +35,8 @@ Register a task inside your `AppDelegate` `didFinishLaunchingWithOptions` and pr
 
 ```Swift
 WorkManager.shared.registerTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask") { task in
-            self.handleOneOffTrigger(task: task as! BGProcessingTask)
-        }
+    self.handleOneOffTrigger(task: task as! BGProcessingTask)
+}
 ```
 
 # Schedule a task
@@ -48,7 +48,7 @@ Two kinds of background tasks can be registered :
 To schedule a one off task:
 
 ```Swift
-WorkManager.shared.scheduleOneOffTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask", name: "database_clear")
+WorkManager.shared.scheduleOneOffTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask", name: "update_something")
 ```
 
 To schedule a periodic task:
@@ -71,6 +71,10 @@ WorkManager.shared.schedulePeriodicTask(withIdentifier: "be.vrt.ios-workmanager.
 
 Indicates the desired behaviour when the same task is scheduled more than once.  
 The default is `KEEP`
+
+```Swift
+WorkManager.shared.scheduleOneOffTask(withIdentifier: "be.vrt.ios-workmanager.oneoffbackgroundtask", name: "update_something", existingWorkPolicy: .replace)
+```
 
 ## Constraints
 

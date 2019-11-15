@@ -5,7 +5,7 @@ public class WorkManager {
     // MARK: Properties
 
     internal let scheduler = WorkScheduler()
-    internal var scheduledTasks: [ScheduledTask] = []
+    internal var scheduledTasks: Set<ScheduledTask> = []
 
     // MARK: Initialization
 

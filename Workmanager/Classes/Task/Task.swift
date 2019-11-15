@@ -1,4 +1,4 @@
-public struct Task: TaskRepresentable {
+public struct Task: TaskRepresentable, Hashable {
 
     var identifier: String
     var name: String

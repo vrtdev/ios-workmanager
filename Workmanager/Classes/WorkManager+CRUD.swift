@@ -35,7 +35,7 @@ extension WorkManager {
                         inputData: inputData)
 
         try scheduler.scheduleTask(task) { request in
-            scheduledTasks.append(ScheduledTask(task: task, request: request))
+            scheduledTasks.insert(ScheduledTask(task: task, request: request))
         }
     }
 
@@ -56,8 +56,8 @@ extension WorkManager {
     }
 
     internal func removeScheduledTask(_ scheduledTask: ScheduledTask) {
-        if let index = scheduledTasks.firstIndex(where: { $0.task == scheduledTask.task }) {
-            scheduledTasks.remove(at: index)
+        if scheduledTasks.contains(scheduledTask) {
+            scheduledTasks.remove(scheduledTask)
         }
     }
 
